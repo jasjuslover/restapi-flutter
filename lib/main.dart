@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         primaryColor: kPrimaryColor,
-        scaffoldBackgroundColor: kBackgroundColor,,
+        scaffoldBackgroundColor: kBackgroundColor,
       ),
       home: HomeScreen(),
     );
