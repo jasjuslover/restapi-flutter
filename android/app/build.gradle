@@ -52,6 +52,21 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    flavorDimensions "app"
+
+    productPlavors {
+        dev {
+            dimension "app"
+            resValue "string", "app_name", "Dev"
+            versionNameSuffix "-dev"
+        }
+        prod {
+            dimension "app"
+            resValue "string", "app_name", "Prod"
+            applicationId "com.husnikamal.restapi"
+        }
+    }
 }
 
 flutter {
