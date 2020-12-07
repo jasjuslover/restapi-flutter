@@ -7,6 +7,7 @@ import 'package:restapi_flutter/data/repositories/poke_repository_impl.dart';
 import 'package:restapi_flutter/dio_client.dart';
 import 'package:restapi_flutter/domain/usecases/poke_usecase.dart';
 import 'package:restapi_flutter/presentation/bloc/bloc.dart';
+import 'package:restapi_flutter/presentation/ui/poke_detail_page.dart';
 
 import '../../constants.dart';
 import '../../constants.dart';
@@ -102,11 +103,27 @@ class _PokeListPageState extends State<PokeListPage> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Image.network(
-                      '$imageBaseUrl/${index + 1}.png',
-                      fit: BoxFit.contain,
-                      height: MediaQuery.of(context).size.width - 256,
-                      width: MediaQuery.of(context).size.width - 256,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PokeDetailPage(
+                              image: '$imageBaseUrl/${index + 1}.png',
+                              index: index,
+                            ),
+                          ),
+                        );
+                      },
+                      child: Hero(
+                        tag: 'img_poke_$index',
+                        child: Image.network(
+                          '$imageBaseUrl/${index + 1}.png',
+                          fit: BoxFit.contain,
+                          height: MediaQuery.of(context).size.width - 256,
+                          width: MediaQuery.of(context).size.width - 256,
+                        ),
+                      ),
                     ),
                     Flexible(
                       child: Padding(
