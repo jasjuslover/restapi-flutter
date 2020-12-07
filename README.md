@@ -45,7 +45,7 @@ Production
 flutter run --flavor prod --target=lib/main.dart
 ```
 
-### License
+## License
 ```xml
 MIT License
 
