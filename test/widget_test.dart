@@ -8,7 +8,7 @@
 // import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:welcome_login_screen/main.dart';
+import 'package:restapi_flutter/main.dart';
 
 void main() {
   testWidgets('Find text widget with Hello World App! text',
