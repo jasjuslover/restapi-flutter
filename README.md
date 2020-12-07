@@ -17,14 +17,7 @@ Just a simple flutter project for self-learn. This repository is using Poke Api.
 
 ### Generated `*.g.dart` file
 
-Before run the app, make sure you have an emulator running, or a device connected over USB and debugging enabled on that device. Then you need to register the `API_KEY` from [www.themoviedb.org](http://www.themoviedb.org) then enter the `API_KEY` into _**api_constant.dart**_ file
-
-```
-static const apiKey = "HERE";
-
-```
-
-If you want to generate file `*.g.dart`, you can use this command on terminal.
+Before run the app, make sure you have an emulator running, or a device connected over USB and debugging enabled on that device. If you want to generate file `*.g.dart`, you can use this command on terminal.
 
 One time build:
 
